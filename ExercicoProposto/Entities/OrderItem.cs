@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ExercicoProposto.Entities {
     class OrderItem {
@@ -15,6 +13,12 @@ namespace ExercicoProposto.Entities {
             Quantity = quantity;
             Price = price;
             Products = product;
+        }
+
+        public double SubTotal() {
+            double subTotal = Quantity * Price;
+
+            return subTotal;             
         }
     }
 }
