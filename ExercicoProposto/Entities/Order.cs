@@ -8,6 +8,14 @@ namespace ExercicoProposto.Entities {
         public OrderStatus Status { get; set; }
         public List<OrderItem> Orders { get; set; } = new List<OrderItem>();
 
+        public Order() {
+        }
+
+        public Order(DateTime moment, OrderStatus status) {
+            Moment = moment;
+            Status = status;
+        }
+
         public void AddItem(OrderItem order) {
             Orders.Add(order);
         }
